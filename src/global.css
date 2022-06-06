@@ -18,6 +18,8 @@
   --sm: 0.8rem;
   --md: 0.9rem;
   --base: 1rem;
+  --lg: 2rem;
+  --xl: 2.5rem;
 }
 
 * {
