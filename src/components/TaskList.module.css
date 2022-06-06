@@ -30,7 +30,6 @@
 }
 
 .taskList__board {
-  padding: 4rem;
   margin-top: 2rem;
   min-height: 15.25rem;
   border-top: 1px solid var(--gray-400);
@@ -38,6 +37,7 @@
 }
 
 .taskList__board--noTask {
+  margin-top: 4rem;
   align-items: center;
   display: flex;
   background-image: url(../assets/clipboard.svg);

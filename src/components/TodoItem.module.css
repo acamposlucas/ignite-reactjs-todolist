@@ -1,0 +1,45 @@
+.todoItem {
+  list-style-type: none;
+  border-radius: 8px;
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  width: 100%;
+  padding: 1rem;
+  color: var(--gray-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+li + li {
+  margin-top: 0.75rem;
+}
+
+.todoItem__check {
+  height: 1rem;
+  width: 1rem;
+  border: 2px solid var(--blue-400);
+  border-radius: 100%;
+}
+
+.todoItem__check:hover {
+  background-color: var(--blue-700);
+  opacity: 0.2;
+}
+
+.todoItem p {
+  width: calc(100% - 2rem);
+}
+
+.todoItem svg {
+  padding: 0.2rem;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+.todoItem svg:hover {
+  background-color: var(--gray-400);
+  padding: 0.2rem;
+}

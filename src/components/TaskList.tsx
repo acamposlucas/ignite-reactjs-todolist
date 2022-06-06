@@ -1,4 +1,5 @@
 import styles from "./TaskList.module.css";
+import { TodoList } from "./TodoList";
 
 export function TaskList() {
   return (
@@ -12,12 +13,13 @@ export function TaskList() {
         </h2>
       </header>
       <div className={styles.taskList__board}>
-        <div className={styles["taskList__board--noTask"]}>
+        {/* <div className={styles["taskList__board--noTask"]}>
           <p>
             Você ainda não tem tarefas cadastradas <br />
             <span>Crie tarefas e organize seus itens a fazer</span>
           </p>
-        </div>
+        </div> */}
+        <TodoList />
       </div>
     </section>
   );

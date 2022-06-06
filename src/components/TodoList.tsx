@@ -1,0 +1,10 @@
+import { TodoItem } from "./TodoItem";
+
+export function TodoList() {
+  return (
+    <ul>
+      <TodoItem />
+      <TodoItem />
+    </ul>
+  );
+}
