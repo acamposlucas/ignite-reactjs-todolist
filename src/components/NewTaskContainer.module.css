@@ -1,7 +1,9 @@
-.wrapper {
+.input__container--wrapper {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
+  position: relative;
+  top: -1.5rem;
 }
 
 .input__container {
@@ -30,7 +32,7 @@
   border-color: var(--purple-500);
 }
 
-.wrapper button {
+.input__container--wrapper button {
   font-weight: bold;
   color: var(--gray-100);
   padding: 1rem;
@@ -45,11 +47,11 @@
   transition: background-color 0.2s;
 }
 
-.wrapper button:hover {
+.input__container--wrapper button:hover {
   background-color: var(--blue-400);
 }
 
-.wrapper button:after {
+.input__container--wrapper button:after {
   content: "";
   background-image: url("../assets/plus.svg");
   background-repeat: no-repeat;

@@ -2,7 +2,7 @@ import styles from "./NewTaskContainer.module.css";
 
 export function NewTaskContainer() {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles["input__container--wrapper"]}>
       <div className={styles.input__container}>
         <label htmlFor="newTask"></label>
         <input
