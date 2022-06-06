@@ -1,0 +1,28 @@
+.input__container {
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  max-width: 40rem;
+  margin-inline: auto;
+  position: relative;
+  top: -1.5rem;
+  width: 100%;
+}
+
+.input__container input {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--gray-100);
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+}
+
+.input__container input::placeholder {
+  color: var(--gray-300);
+}
+
+.input__container input:focus {
+  border-color: var(--purple-500);
+}
