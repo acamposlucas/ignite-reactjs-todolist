@@ -1,11 +1,14 @@
+.wrapper {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
 .input__container {
   background-color: var(--gray-500);
   border: 1px solid var(--gray-700);
   border-radius: 8px;
   max-width: 40rem;
-  margin-inline: auto;
-  position: relative;
-  top: -1.5rem;
   width: 100%;
 }
 
@@ -25,4 +28,32 @@
 
 .input__container input:focus {
   border-color: var(--purple-500);
+}
+
+.wrapper button {
+  font-weight: bold;
+  color: var(--gray-100);
+  padding: 1rem;
+  background-color: var(--blue-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.wrapper button:hover {
+  background-color: var(--blue-400);
+}
+
+.wrapper button:after {
+  content: "";
+  background-image: url("../assets/plus.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
 }
