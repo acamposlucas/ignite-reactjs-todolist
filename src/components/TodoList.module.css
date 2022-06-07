@@ -58,3 +58,69 @@
   color: var(--gray-400);
   font-weight: 400;
 }
+
+.todoItem {
+  list-style-type: none;
+  border-radius: 8px;
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  width: 100%;
+  padding: 1rem;
+  color: var(--gray-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+li + li {
+  margin-top: 0.75rem;
+}
+
+.todoItem__button--notDone {
+  height: 1rem;
+  width: 1rem;
+  border: 2px solid var(--blue-400);
+  border-radius: 100%;
+  background-color: inherit;
+}
+
+.todoItem__button--notDone input {
+  appearance: none;
+}
+
+/* .todoItem__button--notDone:hover {
+  border-color: var(--blue-700);
+}
+
+.todoItem__button--done {
+  background-color: var(--purple-500);
+  height: 1rem;
+  width: 1rem;
+  border: 2px solid var(--blue-400);
+  border-radius: 100%;
+  background-image: url(../assets/checkmark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+.todoItem__button--done:hover {
+  background-color: var(--purple-400);
+} */
+
+.todoItem p {
+  width: calc(100% - 2rem);
+}
+
+.todoItem svg {
+  padding: 0.2rem;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+.todoItem svg:hover {
+  background-color: var(--gray-400);
+  padding: 0.2rem;
+}

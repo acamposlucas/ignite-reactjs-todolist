@@ -22,9 +22,7 @@ export function NewTaskContainer({ todo, setTodo, handleAddNewTodo }: Props) {
           onChange={(e) => setTodo(e.target.value)}
         />
       </div>
-      <button onClick={handleAddNewTodo} type="button">
-        Criar
-      </button>
+      <button type="submit">Criar</button>
     </form>
   );
 }
