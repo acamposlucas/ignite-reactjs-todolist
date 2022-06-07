@@ -77,7 +77,7 @@ li + li {
   margin-top: 0.75rem;
 }
 
-.todoItem__button--notDone {
+.todoItem__checkbox {
   height: 1rem;
   width: 1rem;
   border: 2px solid var(--blue-400);
@@ -85,32 +85,35 @@ li + li {
   background-color: inherit;
 }
 
-.todoItem__button--notDone input {
+.todoItem__checkbox input {
   appearance: none;
 }
 
-/* .todoItem__button--notDone:hover {
+.todoItem__checkbox:hover {
   border-color: var(--blue-700);
 }
 
-.todoItem__button--done {
+.todoItem__checkbox:focus-within {
   background-color: var(--purple-500);
-  height: 1rem;
-  width: 1rem;
-  border: 2px solid var(--blue-400);
-  border-radius: 100%;
   background-image: url(../assets/checkmark.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80%;
+  border: 2px solid var(--purple-500);
 }
 
-.todoItem__button--done:hover {
+.todoItem__checkbox:focus-within:hover {
   background-color: var(--purple-400);
-} */
+  border: 2px solid var(--purple-400);
+}
 
-.todoItem p {
+.todoTitle {
   width: calc(100% - 2rem);
+}
+
+.todoTitle--isDone {
+  width: calc(100% - 2rem);
+  text-decoration: line-through;
 }
 
 .todoItem svg {

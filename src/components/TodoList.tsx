@@ -1,13 +1,21 @@
 import styles from "./TodoList.module.css";
 import { Todo } from "../model";
 import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
 interface Props {
-  todo: Todo;
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-export function TodoList({ todo, todos, setTodos }: Props) {
+export function TodoList({ todos, setTodos }: Props) {
+  function handleToggleTodoIsDone(id: string) {
+    const newTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
+    );
+
+    setTodos(newTodos);
+  }
+
   return (
     <section className={styles.taskList}>
       <header className={styles.taskList__header}>
@@ -29,17 +37,22 @@ export function TodoList({ todo, todos, setTodos }: Props) {
         ) : (
           <ul>
             {todos.map((todo) => (
-              <li key={uuidv4()} className={styles.todoItem}>
-                <label
+              <li key={todo.id} className={styles.todoItem}>
+                <label className={styles["todoItem__checkbox"]}>
+                  <input
+                    type="checkbox"
+                    checked={todo.isDone}
+                    readOnly
+                    onClick={() => handleToggleTodoIsDone(todo.id)}
+                  ></input>
+                </label>
+                <p
                   className={
-                    todo.isDone
-                      ? styles["todoItem__input--done"]
-                      : styles["todoItem__button--notDone"]
+                    todo.isDone ? styles["todoTitle--isDone"] : styles.todoTitle
                   }
                 >
-                  <input type="checkbox" checked={todo.isDone}></input>
-                </label>
-                <p>{todo.todo}</p>
+                  {todo.todo}
+                </p>
                 <svg
                   width="13"
                   height="14"
