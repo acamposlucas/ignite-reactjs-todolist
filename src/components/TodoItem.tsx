@@ -1,13 +1,14 @@
 import styles from "./TodoItem.module.css";
 
-export function TodoItem() {
+interface Props {
+  todo: string;
+}
+
+export function TodoItem({ todo }: Props) {
   return (
     <li className={styles.todoItem}>
       <button className={styles["todoItem__button--notDone"]}></button>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi debitis
-        nisi natus repellat labore deserunt at perferendis minima libero neque
-      </p>
+      <p>{todo}</p>
       <svg
         width="13"
         height="14"

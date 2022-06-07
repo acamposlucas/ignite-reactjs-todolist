@@ -1,19 +1,17 @@
-import { ChangeEvent, FormEvent } from "react";
 import styles from "./NewTaskContainer.module.css";
 
-interface NewTaskContainerProps {
+interface Props {
   todo: string;
   setTodo: React.Dispatch<React.SetStateAction<string>>;
+  handleAddNewTodo: (e: React.FormEvent) => void;
 }
 
-export function NewTaskContainer({ todo, setTodo }: NewTaskContainerProps) {
-  function handleCreateTodo(e: ChangeEvent<HTMLInputElement>) {
-    e.preventDefault();
-    setTodo(e.target.value);
-  }
-
+export function NewTaskContainer({ todo, setTodo, handleAddNewTodo }: Props) {
   return (
-    <form className={styles["input__container--wrapper"]}>
+    <form
+      onSubmit={handleAddNewTodo}
+      className={styles["input__container--wrapper"]}
+    >
       <div className={styles.input__container}>
         <label htmlFor="newTask"></label>
         <input
@@ -21,10 +19,12 @@ export function NewTaskContainer({ todo, setTodo }: NewTaskContainerProps) {
           id="newTask"
           placeholder="Adicione uma nova tarefa"
           value={todo}
-          onChange={handleCreateTodo}
+          onChange={(e) => setTodo(e.target.value)}
         />
       </div>
-      <button type="button">Criar</button>
+      <button onClick={handleAddNewTodo} type="button">
+        Criar
+      </button>
     </form>
   );
 }
