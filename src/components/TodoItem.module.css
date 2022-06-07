@@ -16,16 +16,32 @@ li + li {
   margin-top: 0.75rem;
 }
 
-.todoItem__check {
+.todoItem__button--notDone {
   height: 1rem;
   width: 1rem;
   border: 2px solid var(--blue-400);
   border-radius: 100%;
+  background-color: inherit;
 }
 
-.todoItem__check:hover {
-  background-color: var(--blue-700);
-  opacity: 0.2;
+.todoItem__button--notDone:hover {
+  border-color: var(--blue-700);
+}
+
+.todoItem__button--done {
+  background-color: var(--purple-500);
+  height: 1rem;
+  width: 1rem;
+  border: 2px solid var(--blue-400);
+  border-radius: 100%;
+  background-image: url(../assets/checkmark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+.todoItem__button--done:hover {
+  background-color: var(--purple-400);
 }
 
 .todoItem p {

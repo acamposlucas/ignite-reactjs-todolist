@@ -3,7 +3,7 @@ import styles from "./TodoItem.module.css";
 export function TodoItem() {
   return (
     <li className={styles.todoItem}>
-      <div className={styles.todoItem__check}></div>
+      <button className={styles["todoItem__button--notDone"]}></button>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi debitis
         nisi natus repellat labore deserunt at perferendis minima libero neque
