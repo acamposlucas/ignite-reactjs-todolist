@@ -16,7 +16,6 @@ export function TodoList({ todos, setTodos }: Props) {
     todos.forEach((todo) =>
       todo.isDone === true ? (totalTodosCompleted += 1) : null
     );
-    console.log(totalTodosCompleted);
     setTodosCompleted(totalTodosCompleted);
   });
 

@@ -93,7 +93,14 @@ li + li {
   border-color: var(--blue-700);
 }
 
-.todoItem__checkbox:focus-within {
+.todoItem__checkbox input:checked {
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--purple-500);
   background-image: url(../assets/checkmark.svg);
   background-position: center;
@@ -102,7 +109,7 @@ li + li {
   border: 2px solid var(--purple-500);
 }
 
-.todoItem__checkbox:focus-within:hover {
+.todoItem__checkbox input:checked:hover {
   background-color: var(--purple-400);
   border: 2px solid var(--purple-400);
 }
@@ -116,14 +123,23 @@ li + li {
   text-decoration: line-through;
 }
 
-.todoItem svg {
+.todoItem button {
+  background-color: transparent;
+  border: none;
+  padding: 0.2rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todoItem button:hover {
+  background-color: var(--gray-400);
+}
+
+.todoItem button svg {
   padding: 0.2rem;
   border-radius: 4px;
   width: 24px;
   height: 24px;
-}
-
-.todoItem svg:hover {
-  background-color: var(--gray-400);
-  padding: 0.2rem;
 }
