@@ -9,6 +9,16 @@ interface Props {
 
 export function TodoList({ todos, setTodos }: Props) {
   const [todosCreated, setTodosCreated] = useState(todos.length);
+  const [todosCompleted, setTodosCompleted] = useState<number>(0);
+
+  useEffect(() => {
+    let totalTodosCompleted = 0;
+    todos.forEach((todo) =>
+      todo.isDone === true ? (totalTodosCompleted += 1) : null
+    );
+    console.log(totalTodosCompleted);
+    setTodosCompleted(totalTodosCompleted);
+  });
 
   useEffect(() => {
     setTodosCreated(todos.length);
@@ -34,7 +44,7 @@ export function TodoList({ todos, setTodos }: Props) {
           Tarefas criadas <span>{todosCreated}</span>
         </h2>
         <h2>
-          Concluídas <span>0</span>
+          Concluídas <span>{todosCompleted}</span>
         </h2>
       </header>
       <div className={styles.taskList__board}>
